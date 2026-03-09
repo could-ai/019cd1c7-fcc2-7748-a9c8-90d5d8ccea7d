@@ -49,8 +49,8 @@ class FamilyPage extends StatelessWidget {
         onSubmit: (data) {
           final member = FamilyMember(
             id: DateTime.now().toString(),
-            name: data['Name'],
-            relation: data['Relation'],
+            name: data['Name'] ?? '',
+            relation: data['Relation'] ?? 'Head',
             status: 'active',
           );
           dataProvider.addFamilyMember(member);
@@ -84,7 +84,7 @@ class FamilyCard extends StatelessWidget {
           child: Column(
             children: [
               CircleAvatar(
-                child: Text(member.name[0]),
+                child: Text(member.name.isNotEmpty ? member.name[0] : '?'),
               ),
               Text(member.name, style: const TextStyle(color: Colors.white)),
               Text(member.relation, style: const TextStyle(color: Colors.white70)),

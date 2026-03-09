@@ -42,7 +42,7 @@ class DataProvider extends ChangeNotifier {
       ),
     ];
     _entities = [
-      Entity(id: '1', name: 'Holding Co.', type: 'Holding Company', jurisdiction: 'USA'),
+      Entity(id: '1', name: 'Holding Co.', type: 'Holding Company', jurisdiction: 'USA', status: 'active'),
     ];
     notifyListeners();
   }

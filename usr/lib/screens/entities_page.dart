@@ -49,9 +49,9 @@ class EntitiesPage extends StatelessWidget {
         onSubmit: (data) {
           final entity = Entity(
             id: DateTime.now().toString(),
-            name: data['Name'],
-            type: data['Type'],
-            jurisdiction: data['Jurisdiction'],
+            name: data['Name'] ?? '',
+            type: data['Type'] ?? 'Holding Company',
+            jurisdiction: data['Jurisdiction'] ?? '',
             status: 'active',
           );
           dataProvider.addEntity(entity);
@@ -84,7 +84,7 @@ class EntityCard extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           child: Column(
             children: [
-              Icon(Icons.business, color: const Color(0xFFD4AF37)),
+              const Icon(Icons.business, color: Color(0xFFD4AF37)),
               Text(entity.name, style: const TextStyle(color: Colors.white)),
               Text(entity.type, style: const TextStyle(color: Colors.white70)),
             ],

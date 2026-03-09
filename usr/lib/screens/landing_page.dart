@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'widgets/app_layout.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -70,29 +69,29 @@ class LandingPage extends StatelessWidget {
                       style: TextStyle(fontSize: 24, color: Colors.white),
                     ),
                     const SizedBox(height: 20),
-                    TextField(
-                      decoration: const InputDecoration(
+                    const TextField(
+                      decoration: InputDecoration(
                         labelText: 'Name',
                         border: OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 10),
-                    TextField(
-                      decoration: const InputDecoration(
+                    const TextField(
+                      decoration: InputDecoration(
                         labelText: 'Email',
                         border: OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 10),
-                    TextField(
-                      decoration: const InputDecoration(
+                    const TextField(
+                      decoration: InputDecoration(
                         labelText: 'Company',
                         border: OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 10),
-                    TextField(
-                      decoration: const InputDecoration(
+                    const TextField(
+                      decoration: InputDecoration(
                         labelText: 'Message',
                         border: OutlineInputBorder(),
                       ),
